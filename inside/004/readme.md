@@ -46,7 +46,7 @@ multi(); //호출 불가
 
 > Function() 함수 생성자 이용 방법
 
-```javascipt
+```javascript
 // new Function (arg , functionbady )
 var add = new Function('arg0', 'return arg');
 ```
