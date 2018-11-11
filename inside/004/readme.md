@@ -48,6 +48,6 @@ multi(); //호출 불가
 
 ```javasciprt
 // new Function (arg , functionbady )
-var add = new Function(arg0, 'return arg');
+var add = new Function('arg0', 'return arg');
 ```
 
