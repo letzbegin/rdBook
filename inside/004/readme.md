@@ -27,7 +27,7 @@ function add(arg){
 > 함수 표현식 방식
 + 함수를 하나의 변수로 표현하며, 익명함수를 사용한다.
 + 함수명을 정의하여도 변수의 이름으로만 호출가능
-+ __함수명__을 사용하면 __제귀함수__를 __구현__ 할수 있다.
++ __함수명__ 을 사용하면 __제귀함수__ 를 __구현__ 할수 있다.
 
 ```javascript
 var add = function (arg){
@@ -44,4 +44,10 @@ multi(); //호출 불가
 
 ```
 
-> 
+> Function() 함수 생성자 이용 방법
+
+```javasciprt
+// new Function (arg , functionbady )
+var add = new Function(arg0, 'return arg');
+```
+
