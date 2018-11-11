@@ -51,3 +51,39 @@ multi(); //호출 불가
 var add = new Function('arg0', 'return arg');
 ```
 
+> 함수 호이스팅
++ 선언문 형태로 함수를 선언하게 되면, 선언된 함수의 스코프는 맨 처음부터 시작된다
+
+<table>
+  <tr>
+  <th>코드</th>
+  <th>인터프리터 처리</th>
+  </tr>
+  <tr>
+    <td>
+     
+function sum (a, b) {<br/>
+  var x = add(a,b);<br/>
+  return x;<br/>
+<br/>
+  function add (c, d) {<br/>
+    var result = c+d;<br/>
+    return result;<br/>
+  }
+}
+     </td>
+     <td>
+  function sum (a, b) {<br/>
+  var x = undefined;<br/>
+  function add (c, d) {<br/>
+    var result = c+d;<br/>
+    return result;<br/>
+  }<br/>
+
+  x = add(a,b);<br/>
+  return x;<br/>
+}
+</td>
+  </tr>  
+
+
