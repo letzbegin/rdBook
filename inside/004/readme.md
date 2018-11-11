@@ -54,36 +54,9 @@ var add = new Function('arg0', 'return arg');
 > 함수 호이스팅
 + 선언문 형태로 함수를 선언하게 되면, 선언된 함수의 스코프는 맨 처음부터 시작된다
 
-<table>
-  <tr>
-  <th>코드</th>
-  <th>인터프리터 처리</th>
-  </tr>
-  <tr>
-    <td>
-     
-function sum (a, b) {<br/>
-  var x = add(a,b);<br/>
-  return x;<br/>
-<br/>
-  function add (c, d) {<br/>
-    var result = c+d;<br/>
-    return result;<br/>
-  }
-}
-     </td>
-     <td>
-  function sum (a, b) {<br/>
-  var x = undefined;<br/>
-  function add (c, d) {<br/>
-    var result = c+d;<br/>
-    return result;<br/>
-  }<br/>
+코드 | 인터프리터 처리
+--- | ----
+``` function sum (a, b) {  var x = add(a,b);  return x; function add (c, d) { var result = c+d; return result; }} ``` | ``` function sum (a, b) {  var x = undefined;  function add (c, d) {    var result = c+d;    return result;  } ```
 
-  x = add(a,b);<br/>
-  return x;<br/>
-}
-</td>
-  </tr>  
 
 
